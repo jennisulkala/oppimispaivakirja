@@ -1,0 +1,79 @@
+
+<!DOCTYPE html> <!--Jokaisen HTML-tiedoston pitää alkaa DOCTYPE-elementillä-->
+<html lang="fi"> <!--Kertoo selaimelle minkä kielinen sivun sisältö on (auttaa automaattisissa kielenkääntäjissä, osaa muun muassa laittaa tietyn kielen heittomerkit yms.)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Viikko 1 - Oppimispäiväkirja</title>
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+    <style>
+      body {
+        background-color: rgb(226, 226, 247);
+      }
+
+      body {
+        width:90%;
+        margin: 0 auto;
+      }
+
+      img {
+        display:block; /*kommentti tähän*/
+        width: 70%;
+        margin: 0 auto;
+
+      }
+
+      .header-img {
+        display:inline;
+      }
+
+      div {
+        background: rgb(250, 236, 185);
+        padding: 20px;
+      }
+    </style>
+</head>
+<body>
+    <div>
+
+    <img class="header-img" src="./assets/img/kuva1.jpg">
+
+    
+    
+    <h1>Viikko 1: Oppimispäiväkirja</h1>
+    <p>
+      Lataa koodiesimerkkejä varten tehty komponentti <a href="./assets/components/html-css-viewer.js">täältä</a> ja fontti <a href="./assets/fonts/FontWithASyntaxHighlighter-Regular.woff2">täältä</a>
+    </p>
+    <h2>Tällä viikolla opin:</h2>
+    <ul>
+        <li>H1-H6 tagit on otsikoille</li>
+        <li>p-tagi on leipätekstille</li>
+        <li>img tag on kuville</li>
+        <li>css tulee aina style-tagien sisään</li>
+    </ul>
+    
+    Tässä on koodiesimerkki:
+    <html-css-viewer preview>
+      <template>
+        <style>
+          .example { 
+            color: red; 
+          }
+        </style>
+        <div class="example">
+          Hei, maailma!
+        </div>
+      </template>
+    </html-css-viewer>
+    
+    <h2>Reflektio:</h2>
+    <p>[Reflektoi oppimaasi, sekä pohdi viikon aikana käsiteltyjä asioita]</p>
+    
+    <nav>
+        <a href="viikkoX-1.html">← Edellinen viikko</a> |
+        <a href="viikkoX+1.html">Seuraava viikko →</a>
+
+    </div>
+    </nav>
+</body>
+</html>
