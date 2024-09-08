@@ -4,55 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Viikko 1 - Oppimispäiväkirja</title>
+    <title>VIIKKO 1</title>
     <script type="module" src="./assets/components/html-css-viewer.js"></script>
     <style>
+
+      body {
+        font: 0.95em "Courier New", monospace;
+      }
+
       body {
         background-color: rgb(226, 226, 247);
       }
 
       body {
-        width:90%;
+        width:80%;
         margin: 0 auto;
       }
 
+      .header { 
+        margin: 0; 
+        padding: 0; 
+      } 
+
       img {
         display:block; /*kommentti tähän*/
-        width: 70%;
+        width: 60%;
         margin: 0 auto;
 
       }
 
       .header-img {
-        display:inline;
+        padding: 50px;
       }
 
       div {
-        background: rgb(250, 236, 185);
-        padding: 20px;
+        background: rgb(255, 246, 216);
+        padding: 40px;
       }
+
+      a:link {
+        color: rgb(147, 147, 209);
+      }
+
+      a:visited {
+        color: rgb(147, 147, 209);
+      }
+
+      a:hover {
+        text-decoration:dotted
+      }
+
     </style>
 </head>
 <body>
     <div>
 
-    <img class="header-img" src="./assets/img/kuva1.jpg">
+    <img class="header-img" src="./assets/img/title.png">
 
     
-    
-    <h1>Viikko 1: Oppimispäiväkirja</h1>
     <p>
-      Lataa koodiesimerkkejä varten tehty komponentti <a href="./assets/components/html-css-viewer.js">täältä</a> ja fontti <a href="./assets/fonts/FontWithASyntaxHighlighter-Regular.woff2">täältä</a>
+    <h1 class="header">VIIKKO 1</h1>
+      Tällä viikolla opin miten luoda html-tiedosto (ja perus nettisivun perusta) Visual Studio Coderilla ja miten tuoda se “eloon” GitHubin avulla. Sain selkeyttä siihen, että miten HTML, CSS ja Javascript toimii ja mitkä niiden funktiot on. HTML on siis kaiken sisällön perusta/itse sisältö, CSS antaa sisällölle tyylin ja Javascript tekee sisällöstä interaktiivista. Ymmärsin mihin kohtaa koodia CSS laitetaan , eli style-tagien sisään head-osioon. Tällöin puhutaan sisäisestä CSS:stä (internal CSS), jolloin se vaikuttaa kyseisen HTML-tiedoston tyyliin. Ulkoisesta CSS:stä (external CSS) puhutaan, kun halutaan vaikuttaa useaan HTML-tiedostoon samanaikaisesti. Tällöin ulkoinen CSS on tehty erilliselle tiedostolle, joka taas linkitetään haluttuihin HTML-tiedostoihin, jolloin se vaikuttaa kokonaisen nettisivuston tyyliin.
     </p>
-    <h2>Tällä viikolla opin:</h2>
-    <ul>
-        <li>H1-H6 tagit on otsikoille</li>
+    <b>Tällä viikolla opin myös:</b>
+        <li>h1-h6 tagit on otsikoille</li>
         <li>p-tagi on leipätekstille</li>
-        <li>img tag on kuville</li>
-        <li>css tulee aina style-tagien sisään</li>
-    </ul>
+        <li>img-tag on kuville</li>
+        <li>ul- ja li-tageilla voi tehdä listoja</li>
     
-    Tässä on koodiesimerkki:
+    <br>
+    Opin miten koodin sisään voi jättää kommentteja huomioksi itselle tai muille.
+    <html-css-viewer preview>
+          <template>
+            <style>
+          HTML:n sisään jätettäessä kommentti kirjoitetaan <!--näiden merkkien sisään.-->
+            
+          CSS:ään kommentteja jätettäessä kommentit kirjoitetaan /*näiden merkkien sisään.*/
+          </style>
+          </template>
+    </html-css-viewer>
+
+    <p>
+    Oivaltavaa oli myös se, miten eri HTML-koodin osiin voi CSS:ssä referoida class-tageilla, kuten tässä esimerkissä: 
     <html-css-viewer preview>
       <template>
         <style>
@@ -64,14 +97,20 @@
           Hei, maailma!
         </div>
       </template>
-    </html-css-viewer>
+    </html-css-viewer></p>
     
-    <h2>Reflektio:</h2>
-    <p>[Reflektoi oppimaasi, sekä pohdi viikon aikana käsiteltyjä asioita]</p>
+    <p>
+    <b>Mielenkiintoisia lähteitä ja linkkejä mitä tuli esiin tällä viikolla:</b>
+      <br><a href="https://getkirby.com/" target="_blank">Kirby</a>
+      <br><a href="https://laurelschwulst.com/" target="_blank">Laurel Schwulst</a>
+      <br><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
+      <br><a href="https://codepen.io/" target="_blank">Code Pen</a>
+      <br><a href="https://www.websitecarbon.com/" target="_blank">Website Carbon Calculator</a>
+    </p>
     
     <nav>
-        <a href="viikkoX-1.html">← Edellinen viikko</a> |
-        <a href="viikkoX+1.html">Seuraava viikko →</a>
+        <a href="viikko6.html">← Edellinen viikko</a> -
+        <a href="viikko2.html">Seuraava viikko →</a>
 
     </div>
     </nav>
