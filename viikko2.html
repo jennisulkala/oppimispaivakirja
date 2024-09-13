@@ -28,7 +28,7 @@
 
       img {
         display:block; /*kommentti tähän*/
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
 
       }
@@ -54,6 +54,20 @@
         text-decoration:dotted
       }
 
+      .grid-container {
+        display: grid;
+        gap: 1px; 
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        width: 100%;
+        padding: 1px;
+        background-color: #000000;
+      }
+      @media (max-width: 1250px) {
+        .grid-container {
+            grid-template-columns: repeat(2, minmax(100px, 1fr));
+        }
+      }
+
     </style>
 </head>
 <body>
@@ -64,43 +78,74 @@
     
     <p>
     <h1 class="header">VIIKKO 2</h1>
-      Tällä viikolla käytiin läpi sitä miten kuvia voi optimoida käytettäväksi netissä, jotta ne ei ois niin raskaita. Puhuttiin sekä siitä miten itse kuvasta voi esim Photarilla tehdä kevyemmän vaikkapa halftonea käyttämällä, mutta myös käyttämällä netissä olevia konverttereita (esim. TinyPNG), jotka pakkaa niin kuvista, videoista kuin audioistakin pienempiä tiedostoja.
+      Tällä viikolla käytiin läpi sitä miten kuvia voi optimoida käytettäväksi netissä, jotta ne ei ois niin raskaita. Puhuttiin sekä siitä miten itse kuvasta voi esim Photarilla tehdä kevyemmän vaikkapa halftonea käyttämällä, mutta myös käyttämällä netissä olevia konverttereita (esim. TinyPNG), jotka pakkaa niin kuvista, videoista kuin audioistakin pienempiä tiedostoja. Opin myös, että vektoritiedostoja voi tuoda koodimuodossa suoraan Illustratorista, jolla saa tosi teräviä "kuvia" aikaan. Koodin voi tuoda klikkaamalla Export As > SVG > Show Code. Myöhemmin tätä koodia voi myös editoida suoraan koodin sisällä, eikä kuvaa tarvitse esimerkiksi mennä muuttamaan Illustratoriin. 
+      </p>
 
-      Opin myös, että vektoritiedostoja voi tuoda koodimuodossa suoraan Illustratorista, jolla saa tosi teräviä "kuvia" aikaan. Koodin voi tuoda klikkaamalla Export As > SVG > Show Code. Myöhemmin tätä koodia voi myös editoida suoraan koodin sisällä, eikä kuvaa tarvitse esimerkiksi mennä muuttamaan Illustratoriin. 
+      <p>
+      Puhuttiin CSS:n (Cascading Style Sheets) tärkeimmistä peruselementeistä, jotka pitäisi oppia, jotta toimivia nettisivuja pystyy rakentamaan. Tärkeimpiä konsepteja ovat <i>box-model</i>, <i>cascade</i>, <i>inheritance</i> ja <i>specifity</i>. Puhuttiin siis vähän grideistä ja luin CSS-Tricks-sivustolta aiheesta vähän lisää ja luulen ymmärtäneeni miten sen perusteet suunnilleen toimii.
+   
+
+    <div class="grid-container">
+        <div class="grid-item">Eli</div>
+        <div class="grid-item">esimerkiksi</div>
+        <div class="grid-item">tällä</div>
+        <div class="grid-item">tavalla</div>
+        <div class="grid-item">!</div>
+        <div class="grid-item">!</div>
+    </div>
     </p>
-    <b>Tällä viikolla opin myös:</b>
-        <li>h1-h6 tagit on otsikoille</li>
-        <li>p-tagi on leipätekstille</li>
-        <li>img-tag on kuville</li>
-        <li>ul- ja li-tageilla voi tehdä listoja</li>
-    
-    <br>
-    Opin miten koodin sisään voi jättää kommentteja huomioksi itselle tai muille.
-    <html-css-viewer preview>
-          <template>
-            <style>
-          HTML:n sisään jätettäessä kommentti kirjoitetaan <!--näiden merkkien sisään.-->
-            
-          CSS:ään kommentteja jätettäessä kommentit kirjoitetaan /*näiden merkkien sisään.*/
-          </style>
-          </template>
-    </html-css-viewer>
+        Grideillä pystyy rakentamaan siis tosi monimutkaisiakin leiskoja ja sillä voi rakentaa koko sivuston pohjan.
 
     <p>
-    Oivaltavaa oli myös se, miten eri HTML-koodin osiin voi CSS:ssä referoida class-tageilla, kuten tässä esimerkissä: 
+        Cascadella taas tarkoitetaan käytännössä sitä, että CSS-sääntöjen järjestyksellä on väliä. Jos koodissa on peräkkäin esimerkiksi kaksi samanarvoista CSS-sääntöä, on jälkimmäinen aina se, joka "määrää lopputuloksen". Eli esimerkiksi näin:
+    </p>
     <html-css-viewer preview>
-      <template>
-        <style>
-          .example { 
-            color: red; 
-          }
-        </style>
-        <div class="example">
-          Hei, maailma!
-        </div>
-      </template>
-    </html-css-viewer></p>
-    
+        <template>
+          <style>
+            .h1 { 
+              color: red; 
+            }
+
+            .h1 {
+              color: green;
+            }
+          </style>
+          <h1 class="h1">Cascade-esimerkki.</h1>
+        </template>
+      </html-css-viewer></p>
+
+    <p>
+        Specifityllä taas tarkoitetaan sitä, että jos jokin CSS-sääntö on spesifimpi kuin toinen, vaikka ne olisivat CSS-koodin järjestyksessä ns. väärin päin, kumoaa spesifimpi sääntö vähemmän spesifin säännön. Specifity järjestys: browser > element > class > id. Id:llä spesifiointia ei kuitenkaan suositella käyttämään, sillä se on niin spesifi, että se saattaa aiheuttaa helposti ongelmia. Se toimii kuitenkin joihinkin tiettyihin funktioihin todella hyvin, esim. tilanteisiin, joissa haluaa vaikkapa klikata "takaisin ylös", jota monissa sivuissa käytetään. Tässä selitetään hyvin se, miksi sitä ei kuitenkaan yleisesti ottaen kannattaisi käyttää:
+        </p>
+        <p>
+           "<i>IDs should be unique on a page. This means that if you attach a style to an ID, you won't be able to reuse it within the same webpage. Classes, however, can appear on several HTML elements on the same page. Being able to reuse styles is one of the advantages of CSS. For example, it would be difficult to style a list element directly using just IDs. Admittedly, not every style needs to be reused, but it's nice to have the option.</i>" Teksti <a href="https://dev.to/clairecodes/reasons-not-to-use-ids-in-css-4ni4" target="_blank">täältä</a>.
+        </p>
+
+            <html-css-viewer preview>
+              <template>
+                <style>
+              .main-heading {
+                color: red;
+              }
+
+              h1 {
+                color: blue;
+              }
+                </style>
+                
+                    <h1 class="main-heading">Specifity-esimerkki.</h1>
+                
+              </template>
+            </html-css-viewer></p>
+
+    <p>
+        Inheritance-konseptilla taas tarkoitaan sitä, että osa CSS:ään asetetuista parent elementtien arvoista periytyy niiden child elementeille. On tärkeää kuitenkin huomata, että kaikki arvot eivät kuitenkaan periydy kaikille elementeille.
+    </p>
+
+    <p>
+        Puhuttiin myös aiheesta flex wrap ja flex basis sekä CSS Culc ja Variable -funktioista, mutta niihin mun pitää vielä paneutua lisää kun aivot on enemmän vastaanottavaisia.
+    </p>
+
     <p>
     <b>Mielenkiintoisia lähteitä ja linkkejä tältä viikolta:</b>
       <br><a href="nuformtype.com" target="_blank">Nuform</a>
