@@ -1,0 +1,114 @@
+
+<!DOCTYPE html> <!--Jokaisen HTML-tiedoston pitää alkaa DOCTYPE-elementillä-->
+<html lang="fi"> <!--Kertoo selaimelle minkä kielinen sivun sisältö on (auttaa automaattisissa kielenkääntäjissä, osaa muun muassa laittaa tietyn kielen heittomerkit yms.)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VIIKKO 3</title>
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+    <style>
+
+      body {
+        font: 0.95em "Courier New", monospace;
+      }
+
+      body {
+        background-color: rgb(226, 226, 247);
+      }
+
+      body {
+        width:80%;
+        margin: 0 auto;
+      }
+
+      .header { 
+        margin: 0; 
+        padding: 0; 
+      } 
+
+      img {
+        display:flex; /*kommentti tähän*/
+        width: 80%;
+        margin: 0 auto;
+
+      }
+
+      .header-img {
+        padding: 50px;
+      }
+
+      div {
+        background: rgb(255, 246, 216);
+        padding: 40px;
+      }
+
+      a:link {
+        color: rgb(147, 147, 209);
+      }
+
+      a:visited {
+        color: rgb(147, 147, 209);
+      }
+
+      a:hover {
+        text-decoration:dotted
+      }
+
+      .grid-container {
+        display: grid;
+        gap: 1px; 
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        width: 100%;
+        padding: 1px;
+        background-color: #000000;
+        font-size: 0.80em;
+      }
+      @media (max-width: 1250px) {
+        .grid-container {
+            grid-template-columns: repeat(2, minmax(50px, 1fr));
+        }
+      }
+
+    </style>
+</head>
+<body>
+    <div>
+
+    <img class="header-img" src="./assets/img/title.png">
+
+    
+    <p>
+    <h1 class="header">VIIKKO 3</h1>
+      Tällä viikolla käytiin vähän syvemmin läpi display: flexiä ja display: gridiä, joilla voi siis molemmilla rakentaa monimutkaisiakin leiskoja. Display: flex luo ns. kaksi akselia "main axis" (horizontal) ja "cross axis" (vertical). <i>Display: flex-direction: column</i> on oletusarvo, jos taas merkitsee <i>display: flex-direction: row</i> menee kolumnit vierekkäin. Flex wrapper -ominaisuudella voidaan määrätä se, ylittyvätkö elementit useammalle riville. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">Täällä</a> hyvin selitetty aiheesta. Käytiin läpi myös eri <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank">justify-content</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank">align-items</a> ja <a href="https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/" target="_blank">flex-grow, flex-shrink sekä flex-basis</a> -ominaisuuksia. Ymmärsin jonkin verran näiden periaatteita, mutta tuntuu kyllä, että vasta käytännön tekemisen kautta tulee ymmärtämään näitä paremmin.
+      </p>
+
+
+    <p>
+    <b>Mielenkiintoisia lähteitä ja linkkejä tältä viikolta:</b>
+      <br><a href="https://cssgridgarden.com/" target="_blank">Grid Garden</a>
+      <br><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>
+      <br><a href="https://www.youtube.com/kevinpowell" target="_blank">Kevin Powell</a> (tutorials)
+      <br><a href="https://trendlist.org/" target="_blank">Trend List</a>
+      <br><a href="https://htmx.org/" target="_blank">Htmx</a>
+      <br><a href="https://leanrada.com/htmz/" target="_blank">Htmz</a>
+      <br><a href="https://www.hoverstat.es/ " target="_blank">Hoverstat</a> (creative websites gallery)
+      <br><a href="https://loadmo.re/" target="_blank">loadmo.re</a> (mobile websites gallery)
+      <br>
+      <br><b>Inspiroivia sivustoja joita löysin:</b>
+      <br><a href="https://www.isjackwild.com/" target="_blank">Jack Wild</a>
+      <br><a href="https://nike.martine-rose.com/" target="_blank">Nike Martine Rose</a>
+      <br><a href="https://www.cameronsworld.net/ " target="_blank">Cameron's World</a>
+      <br><a href="https://www.lofi.cafe/" target="_blank">Lofi Cafe</a>
+      <br><a href="http://love.xxx/store" target="_blank">Love XXX</a>
+      <br><a href="https://www.malaproject.com/" target="_blank">Mala Project</a>
+      <br><a href="https://drawing.garden/" target="_blank">Drawing Garden</a>
+    </p>
+    
+    <nav>
+        <a href="viikko2.html">← Edellinen viikko</a> -
+        <a href="viikko4.html">Seuraava viikko →</a>
+
+    </div>
+    </nav>
+</body>
+</html>
