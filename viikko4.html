@@ -1,0 +1,105 @@
+
+<!DOCTYPE html> <!--Jokaisen HTML-tiedoston pitää alkaa DOCTYPE-elementillä-->
+<html lang="fi"> <!--Kertoo selaimelle minkä kielinen sivun sisältö on (auttaa automaattisissa kielenkääntäjissä, osaa muun muassa laittaa tietyn kielen heittomerkit yms.)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VIIKKO 4</title>
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+    <style>
+
+      body {
+        font: 0.95em "Courier New", monospace;
+      }
+
+      body {
+        background-color: rgb(226, 226, 247);
+      }
+
+      body {
+        width:80%;
+        margin: 0 auto;
+      }
+
+      .header { 
+        margin: 0; 
+        padding: 0; 
+      } 
+
+      img {
+        display:flex; /*kommentti tähän*/
+        width: 80%;
+        margin: 0 auto;
+
+      }
+
+      .header-img {
+        padding: 50px;
+      }
+
+      div {
+        background: rgb(255, 246, 216);
+        padding: 40px;
+      }
+
+      a:link {
+        color: rgb(147, 147, 209);
+      }
+
+      a:visited {
+        color: rgb(147, 147, 209);
+      }
+
+      a:hover {
+        text-decoration:dotted
+      }
+
+      .grid-container {
+        display: grid;
+        gap: 1px; 
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        width: 100%;
+        padding: 1px;
+        background-color: #000000;
+        font-size: 0.80em;
+      }
+      @media (max-width: 1250px) {
+        .grid-container {
+            grid-template-columns: repeat(2, minmax(50px, 1fr));
+        }
+      }
+
+    </style>
+</head>
+<body>
+    <div>
+
+    <img class="header-img" src="./assets/img/title.png">
+
+    
+    <p>
+    <h1 class="header">VIIKKO 4</h1>
+        Tällä viikolla on tullut työstettyä paljon itse arkistotehtävää ja periaatteessa itse sivusto alkaa olla valmis. Toisaalta sitä voi yhä edelleen jatkoedistää, mutta se on saavuttanu semmosen pisteen johon halusinkin minimissään päästä. Tän viikon lukutehtävä oli hyvä muistutus siitä, että nettisivuja voi tehdä puhtaasta ilosta eikä niiden aina tarvii palvella jotain isompaa tarkotusta. 
+    </p>
+
+    <p>
+      Muuten tällä viikolla puhuttiin hieman fonteista ja niiden toiminnasta nettiympäristössä. Esim. hyvänä vinkkinä jäi mieleen se, että netissä kannattaa käyttää woff2-fonttitiedostoja, koska kaikki selaimet ei tue otf- ja ttf-päätteisiä tiedostoja. Fonttitiedostoja pystyy kääntämään esimerkiksi <a href="https://transfonter.org/" target="_blank">Transfonterin</a> avulla. Puhuttiin myös prefers-reduced-motion media-ominaisuudesta, jota on hyvä käyttää sivuilla, joissa on paljon animaatiota, sillä ne saattaa aiheuttaa joillekin esim. migreeneistä kärsiville oireita. Kyseinen ominaisuus poistaa tai vähentää tarpeettomia animaatioita, jos käyttäjä on omassa selaimessaan asettanut tällaiset asetukset.
+    </p>
+
+
+    <p>
+    <b>Mielenkiintoisia lähteitä ja linkkejä tältä viikolta:</b>
+      <br><a href="https://beautifulwebtype.com/" target="_blank">Beautiful Web Type</a>
+      <br><a href="https://news.ycombinator.com/" target="_blank">Hacker News</a>
+      <br><a href="https://realfavicongenerator.net/" target="_blank">Real Favicon Generator</a>
+      <br><a href="https://transfonter.org/" target="_blank">Transfonter</a>
+    </p>
+    
+    <nav>
+        <a href="viikko3.html">← Edellinen viikko</a> -
+        <a href="viikko5.html">Seuraava viikko →</a>
+
+    </div>
+    </nav>
+</body>
+</html>
