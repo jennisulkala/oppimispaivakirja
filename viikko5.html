@@ -1,0 +1,105 @@
+
+<!DOCTYPE html> <!--Jokaisen HTML-tiedoston pitää alkaa DOCTYPE-elementillä-->
+<html lang="fi"> <!--Kertoo selaimelle minkä kielinen sivun sisältö on (auttaa automaattisissa kielenkääntäjissä, osaa muun muassa laittaa tietyn kielen heittomerkit yms.)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VIIKKO 5</title>
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+    <style>
+
+      body {
+        font: 0.95em "Courier New", monospace;
+      }
+
+      body {
+        background-color: rgb(226, 226, 247);
+      }
+
+      body {
+        width:80%;
+        margin: 0 auto;
+      }
+
+      .header { 
+        margin: 0; 
+        padding: 0; 
+      } 
+
+      img {
+        display:flex; /*kommentti tähän*/
+        width: 80%;
+        margin: 0 auto;
+
+      }
+
+      .header-img {
+        padding: 50px;
+      }
+
+      div {
+        background: rgb(255, 246, 216);
+        padding: 40px;
+      }
+
+      a:link {
+        color: rgb(147, 147, 209);
+      }
+
+      a:visited {
+        color: rgb(147, 147, 209);
+      }
+
+      a:hover {
+        text-decoration:dotted
+      }
+
+      .grid-container {
+        display: grid;
+        gap: 1px; 
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        width: 100%;
+        padding: 1px;
+        background-color: #000000;
+        font-size: 0.80em;
+      }
+      @media (max-width: 1250px) {
+        .grid-container {
+            grid-template-columns: repeat(2, minmax(50px, 1fr));
+        }
+      }
+
+    </style>
+</head>
+<body>
+    <div>
+
+    <img class="header-img" src="./assets/img/title.png">
+
+    
+    <p>
+    <h1 class="header">VIIKKO 5</h1>
+        Tekstiä
+    </p>
+
+    <p>
+      Tekstiä
+    </p>
+
+
+    <p>
+    <b>Mielenkiintoisia lähteitä ja linkkejä tältä viikolta:</b>
+      <br><a href="" target="_blank"></a>
+      <br><a href="" target="_blank"></a>
+      <br><a href="" target="_blank"></a>
+      <br><a href="" target="_blank"></a>
+    </p>
+    
+    <nav>
+        <a href="viikko4.html">← Edellinen viikko</a> -
+        <a href="viikko6.html">Seuraava viikko →</a>
+
+    </div>
+    </nav>
+</body>
+</html>
