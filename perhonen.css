@@ -319,15 +319,6 @@
  .viiva185 { height: 120px; left: 880px; bottom: 2980px;}
 
 
-
- @font-face {
-  font-family: 'Mea Culpa';
-  src: url('/assets/fonts/MeaCulpa-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .teksti {
   div {
       font-family: "Mea Culpa", cursive;
