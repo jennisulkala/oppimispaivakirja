@@ -320,7 +320,13 @@
 
 
 
-
+ @font-face {
+  font-family: 'Mea Culpa';
+  src: url('/assets/fonts/MeaCulpa-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 .teksti {
   div {
